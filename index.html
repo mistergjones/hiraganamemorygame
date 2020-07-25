@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Memory Game</title>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link
+            href="https://fonts.googleapis.com/earlyaccess/hannari.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="wf-hannari">
+                Hiragana Memory Game <br />
+                ( &#x3072;&#x3089;&#x304c;&#x306a; &#x30e1;&#x30e2;&#x30ea;&#x30fb;&#x30b2;&#x30fc;&#x30de)
+            </h2>
+
+            <h3>Score: <span id="result"></span> out of 10</h3>
+
+            <h3>Message: <span id="gameMessage"></span></h3>
+
+            <div class="inner gameBorderStyle">
+                <!-- append child call from app.js will popualte elements here -->
+                <div class="grid"></div>
+            </div>
+
+            <p class="wf-hannari"></p>
+
+            <button class="gameReset">Reset Game</button>
+            <button class="gameReset">&#x308a;&#x305b;&#x30c8;&#x30fb;&#x30b2;&#x30fc;&#x30de</button>
+        </div>
+    </body>
+</html>

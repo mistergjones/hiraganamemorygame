@@ -1,0 +1,60 @@
+body {
+    background-color: green;
+    width: 0 auto;
+}
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 400px;
+    border: solid red 5px;
+    border-radius: 20px;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+.container {
+}
+
+.inner {
+    display: table;
+    margin: 0 auto;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background-color: #ea5a60;
+    font-size: 1rem;
+}
+
+.wf-hannari {
+    font-family: "Hannari";
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        background-color: lightcyan;
+        color: black;
+        width: 0 auto;
+        display: block;
+        text-align: center;
+        border: thick solid black;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        background-color: white;
+        color: black;
+        width: 0 auto;
+        display: block;
+        text-align: center;
+        border: thick solid red;
+        border-radius: 20px;
+    }
+}
