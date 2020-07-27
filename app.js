@@ -182,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // if the name of the first card is the same as the secone card...we have a match, assign both images the blank image.
         else if (cardsChosen[0] === cardsChosen[1]) {
             gameMessage.textContent = "We have a match";
+            japaneseMessage.textcontent = "それは試合でした";
             cards[optionOneId].setAttribute("src", "./images/blank.png");
             cards[optionTwoId].setAttribute("src", "./images/blank.png");
             // remove the event click listener so they cannot click on element that have been won

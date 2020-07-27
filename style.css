@@ -1,7 +1,13 @@
 body {
-    background-color: green;
-    width: 0 auto;
+    width: 60%;
+    margin: 0 auto;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* fraction*/
+}
+
 .grid {
     display: flex;
     flex-wrap: wrap;
@@ -9,16 +15,12 @@ body {
     width: 400px;
     border: solid red 5px;
     border-radius: 20px;
+    background-color: white;
 }
 
 img {
     height: 100px;
     width: 100px;
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr; /* fraction*/
 }
 
 .inner {
@@ -50,7 +52,7 @@ button {
 
 @media screen and (min-width: 400px) {
     body {
-        background-color: lightcyan;
+        background-color: white;
         color: black;
         width: 0 auto;
         display: block;
@@ -62,8 +64,8 @@ button {
 
 @media screen and (min-width: 800px) {
     body {
-        background-color: white;
-        color: black;
+        background-color: black;
+        color: white;
         width: 0 auto;
         display: block;
         text-align: center;
