@@ -17,6 +17,8 @@ img {
 }
 
 .container {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr; /* fraction*/
 }
 
 .inner {
@@ -33,6 +35,17 @@ button {
 
 .wf-hannari {
     font-family: "Hannari";
+}
+
+.japaneseLeftBackground {
+    background-image: url("./images/background.png");
+    background-repeat: no-repeat;
+    transform: scaleX(-1);
+}
+
+.japaneseRightBackground {
+    background-image: url("./images/background.png");
+    background-repeat: no-repeat;
 }
 
 @media screen and (min-width: 400px) {

@@ -105,6 +105,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const grid = document.querySelector(".grid");
     // select and assign the result id for the score. Set to zero straight away
     const resultDisplay = document.querySelector("#result");
+    const japaneseDisplay = document.querySelector("#japaneseResult");
+    const japaneseMessage = document.querySelector("#japaneseMessage");
     resultDisplay.textContent = "0";
 
     //select and assign the game reset button
@@ -154,6 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         // make the game message blank again
         gameMessage.textContent = "";
+        japaneseMessage.textContent = "";
     }
 
     // check for matches
@@ -171,6 +174,9 @@ document.addEventListener("DOMContentLoaded", () => {
             cards[optionTwoId].setAttribute("src", "images/japan.png");
             gameMessage.textContent =
                 "You have clicked the same image! Please try again";
+            // update japanese message to state same image
+            japaneseMessage.innerHTML =
+                "&#12362;&#12394;&#12376; &#12364;   &#12382;&#12358;. &#12463;&#12522;&#12483;&#12463;&#12375;&#12390;&#12367;&#12384;&#12373; &#12356;";
         }
 
         // if the name of the first card is the same as the secone card...we have a match, assign both images the blank image.
@@ -189,16 +195,57 @@ document.addEventListener("DOMContentLoaded", () => {
             cards[optionOneId].setAttribute("src", "./images/japan.png");
             cards[optionTwoId].setAttribute("src", "./images/japan.png");
             gameMessage.textContent = "No match. Please try again";
+            japaneseMessage.textContent =
+                "歯が立たない。もう一度クリックしてください";
         }
         // clear the arrays
         cardsChosen = [];
         cardsChosenId = [];
 
         // update score each time a match. i.e. 1 point
+        // english
         resultDisplay.textContent = cardsWon.length;
+        // japanese results
+        switch (cardsWon.length) {
+            case 1:
+                japaneseDisplay.innerHTML = "&#x4e00";
+
+                break;
+            case 2:
+                japaneseDisplay.innerHTML = "&#x4e8c";
+                break;
+            case 3:
+                japaneseDisplay.innerHTML = "&#x4e09";
+                break;
+            case 4:
+                japaneseDisplay.innerHTML = "&#x56db";
+                break;
+            case 5:
+                japaneseDisplay.innerHTML = "&#x4e94";
+                break;
+            case 6:
+                japaneseDisplay.innerHTML = "&#x516d";
+                break;
+            case 7:
+                japaneseDisplay.innerHTML = "&#x4e03";
+                break;
+            case 8:
+                japaneseDisplay.innerHTML = "&#x516b";
+                break;
+            case 9:
+                japaneseDisplay.innerHTML = "&#x4e5d";
+                break;
+            case 10:
+                japaneseDisplay.innerHTML = "&#x5341";
+                break;
+        }
+
         // now check to see if we have found all matches
         if (cardsWon.length === cardArray.length / 2) {
             gameMessage.textContent = "Congratulations. You found them all";
+            // update japanese message to congratulations
+            japaneseMessage.innerHTML =
+                "&#12362;&#12417;&#12391;&#12392;&#12358;";
         }
     }
 

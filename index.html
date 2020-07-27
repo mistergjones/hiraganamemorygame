@@ -13,24 +13,30 @@
     </head>
     <body>
         <div class="container">
-            <h2 class="wf-hannari">
-                Hiragana Memory Game <br />
-                ( &#x3072;&#x3089;&#x304c;&#x306a; &#x30e1;&#x30e2;&#x30ea;&#x30fb;&#x30b2;&#x30fc;&#x30de)
-            </h2>
+            <div class="japaneseLeftBackground"></div>
+            <div>
+                <h2 class="wf-hannari">
+                    Hiragana Memory Game <br />
+                    ( &#x3072;&#x3089;&#x304c;&#x306a; &#x30e1;&#x30e2;&#x30ea;&#x30fb;&#x30b2;&#x30fc;&#x30de)
+                </h2>
+                
 
-            <h3>Score: <span id="result"></span> out of 10</h3>
+                <h3>Score: <span id="result"></span> / 10 (<span id="japaneseResult">0 </span> / &#x5341)</h3>
 
-            <h3>Message: <span id="gameMessage"></span></h3>
+                <h3>English Message: <span id="gameMessage"></span></h3>
+                <h3>日本語 Message: <span id="japaneseMessage"></span></h3>
 
-            <div class="inner gameBorderStyle">
-                <!-- append child call from app.js will popualte elements here -->
-                <div class="grid"></div>
+                <div class="inner gameBorderStyle">
+                    <!-- append child call from app.js will popualte elements here -->
+                    <div class="grid"></div>
+                </div>
+
+                <p class="wf-hannari"></p>
+
+                <button class="gameReset">Reset Game <br>&#x308a;&#x305b;&#x30c8;&#x30fb;&#x30b2;&#x30fc;&#x30de</button>
+                
             </div>
-
-            <p class="wf-hannari"></p>
-
-            <button class="gameReset">Reset Game</button>
-            <button class="gameReset">&#x308a;&#x305b;&#x30c8;&#x30fb;&#x30b2;&#x30fc;&#x30de</button>
+            <div class='japaneseRightBackground'></div>
         </div>
     </body>
 </html>
