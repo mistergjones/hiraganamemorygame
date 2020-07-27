@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
         this.setAttribute("src", cardArray[cardId].img);
 
         if (cardsChosen.length === 2) {
-            setTimeout(checkForMatch, 300);
+            setTimeout(checkForMatch, 400);
         }
         // make the game message blank again
         gameMessage.textContent = "";
@@ -173,7 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
             cards[optionOneId].setAttribute("src", "images/japan.png");
             cards[optionTwoId].setAttribute("src", "images/japan.png");
             gameMessage.textContent =
-                "You have clicked the same image! Please try again";
+                "Clicked the same image! Please try again";
             // update japanese message to state same image
             japaneseMessage.innerHTML =
                 "&#12362;&#12394;&#12376; &#12364;   &#12382;&#12358;. &#12463;&#12522;&#12483;&#12463;&#12375;&#12390;&#12367;&#12384;&#12373; &#12356;";
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // if the name of the first card is the same as the secone card...we have a match, assign both images the blank image.
         else if (cardsChosen[0] === cardsChosen[1]) {
             gameMessage.textContent = "We have a match";
-            japaneseMessage.textcontent = "それは試合でした";
+            japaneseMessage.innerHTML = "それは試合でした";
             cards[optionOneId].setAttribute("src", "./images/blank.png");
             cards[optionTwoId].setAttribute("src", "./images/blank.png");
             // remove the event click listener so they cannot click on element that have been won
